@@ -9,7 +9,7 @@
 
   header {
     padding: 60px;
-    background-image: linear-gradient(to left, rgba(94, 112, 245, 0.85), rgba(94, 112, 245, 0.85)), url("../public/FondoHeader.gif");
+    background-image: linear-gradient(to left, rgba(94, 112, 245, 0.85), rgba(94, 112, 245, 0.85)), url("/FondoHeader.gif");
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;    
