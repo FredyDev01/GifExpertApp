@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 export const useLocalStorage = ()=> {
     const [storageData, setStorageData] = useState(()=> {
         const Storage = localStorage.getItem("ListCategoria")
-        return JSON.parse(Storage) || []        
+        return JSON.parse(Storage) || false        
     })
 
     const SetLocalstorage = (ArrayData, Delete = false)=>{        
@@ -19,7 +19,7 @@ export const useLocalStorage = ()=> {
     }
 
     useEffect(()=>{
-        if(!storageData.length) SetLocalstorage(["Demon slayer"])        
+        storageData === false && SetLocalstorage(["Demon slayer"])        
     }, [])
 
     return [storageData, SetLocalstorage]
