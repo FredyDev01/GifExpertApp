@@ -31,9 +31,13 @@
     text-align: center;
     color: white;
   }
+
+  h2{
+    margin-top: 30px;
+  }
   
   h3 {
-    margin: 40px 0px 85px 0px;
+    margin-top: 40px;
     font-size: 1.8rem;
     font-weight: bold;
     display: table;        
@@ -73,6 +77,7 @@
   }
 
   .card-grid {
+    margin-top: 85px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
