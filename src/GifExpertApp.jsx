@@ -8,14 +8,11 @@ export const GifExpertApp = () => {
     
     const onAddCategory = (newCategory)=> {
         if(categories.length && categories.find(e => e.toUpperCase() == newCategory.toUpperCase())) return;        
-        setCategories([newCategory])
+        setCategories([newCategory, ...categories])
     }
 
-    const onRemoveCategory = (DeleteAll)=> {            
-        if(DeleteAll) setCategories([], true)        
-        else{       
-            setCategories(categories.filter((e, id)=> id != 0), true)
-        }         
+    const onRemoveCategory = (DeleteAll)=> {               
+        setCategories(DeleteAll ? [] : categories.filter((e, id)=> id != 0), true)             
     }
 
     return (

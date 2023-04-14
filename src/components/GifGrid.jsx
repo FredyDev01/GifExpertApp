@@ -10,18 +10,18 @@ export const GifGrid = ({categ})=> {
         <>
             <h3>{categ} <hr/></h3>
             {
-                isLoading ? ( <h2>Cargando...</h2> )
+                isLoading ? 
+                    ( <h2 style={{marginTop: "30px"}}>Cargando...</h2> )
+                : images.length ?
+                    <div className="card-grid">                                
+                        {                    
+                            images.map(image => (
+                                <GifItem key={image.id} {...image}/>
+                            ))                                                            
+                        }                
+                    </div>
                 :
-                <div className="card-grid">                                
-                {
-                    images.length ?
-                    images.map(image => (
-                        <GifItem key={image.id} {...image}/>
-                    ))
-                    :
-                    <p className="infoData">La busqueda ingrezada no tiene ningun dato registrado.</p>                    
-                }                
-                </div>
+                    <p className="infoData">La busqueda ingrezada no tiene ningun dato registrado.</p>
             }
         </>                
     )
